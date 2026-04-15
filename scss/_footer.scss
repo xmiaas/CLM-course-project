@@ -1,0 +1,61 @@
+.footer {
+    border: 1px solid rgba(0,0,0,0.1);
+    max-height: 205px;
+    padding-top:20px;
+    p {
+        font-size: clamp(11px, 0.7vw, 12px);
+        
+        color: $grayText;
+    }
+    &__top {
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    &__contact {
+        h5 {
+            
+            font-size: clamp(14px, 1vw, 16px);
+        }
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        p {
+            
+            color: $grayText;
+            
+            
+        }
+    } 
+    &__logo { 
+        max-width: 250px;
+        display: flex;
+        align-items: center;
+        gap:16px;
+        flex-wrap: wrap;
+        img {
+        max-width: 40px;
+        max-height: 40px;
+    }
+    h3 { 
+        
+        font-size: clamp(18px, 1.2vw, 20px);
+    }
+    
+    }
+
+    hr { 
+        margin-top: 20px;
+        
+        width: 100%;
+        border: 0;
+        border-top: 1px solid rgba(0,0,0,0.1);
+    }
+    &__letter{ 
+        text-align: center;
+        padding: 18px 0;
+    }
+}

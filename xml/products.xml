@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shop>
+    <categories>
+        <category id="1">Баскетбол</category>
+        <category id="2">Тенис</category>
+        <category id="3">Зал</category>
+        <category id="4">Футбол</category>
+        <category id="5">Туризм</category>
+    </categories>
+    <products>
+        <!-- Баскетбол -->
+        <product id="1">
+            <name>Баскетбольный мяч Spalding</name>
+            <categoryId>1</categoryId>
+            <price>3500</price>
+            <description>Профессиональный баскетбольный мяч из композитной кожи с глубокими каналами
+                для лучшего контроля. Предназначен для интенсивных тренировок в спортивном зале и на
+                специализированных уличных площадках.</description>
+            <photo>photos\photoProducts/notFound.png</photo>
+        </product>
+        <product id="2">
+            <name>Кроссовки Jordan Retro</name>
+            <categoryId>1</categoryId>
+            <price>12000</price>
+            <description>Культовая модель с усиленной поддержкой голеностопа и газовой вставкой Air
+                для максимальной амортизации при прыжках. Износостойкая подошва обеспечивает
+                идеальное сцепление с паркетом в зале.</description>
+            <photo>photos\photoProducts/notFound.png</photo>
+        </product>
+        <product id="3">
+            <name>Баскетбольное кольцо</name>
+            <categoryId>1</categoryId>
+            <price>5500</price>
+            <description>Усиленное стальное кольцо стандартного размера с амортизационным механизмом
+                для защиты щита при бросках сверху. В комплекте идет прочная нейлоновая сетка,
+                устойчивая к любым погодным условиям.</description>
+            <photo>photos\photoProducts/notFound.png</photo>
+        </product>
+        <product id="4">
+            <name>Форма (майка + шорты)</name>
+            <categoryId>1</categoryId>
+            <price>2800</price>
+            <description>Комплект баскетбольной формы из технологичной сетчатой ткани, которая
+                эффективно отводит влагу и обеспечивает вентиляцию. Свободный крой не стесняет
+                движений во время активной игры и дриблинга.</description>
+            <photo>photos\photoProducts/notFound.png</photo>
+        </product>
+
+        <!-- Тенис -->
+        <product id="5">
+            <name>Ракетка Wilson Pro</name>
+            <categoryId>2</categoryId>
+            <price>15000</price>
+            <description>Высокотехнологичная теннисная ракетка из графитового волокна с увеличенным
+                пятном контакта. Обеспечивает идеальный баланс между мощностью удара и контролем
+                мяча, подходит для игроков среднего и продвинутого уровня.</description>
+            <photo>photos\photoProducts/notFound.png</photo>
+        </product>
+        <product id="6">
+            <name>Теннисные мячи (3 шт.)</name>
+            <categoryId>2</categoryId>
+            <price>900</price>
+            <description>Герметичные теннисные мячи премиум-класса с фетровым покрытием высокой
+                плотности. Обладают стабильным отскоком и долговечностью, подходят для игры на любых
+                типах кортов, включая хард и грунт.</description>
+            <photo>photos\photoProducts/notFound.png</photo>
+        </product>
+        <product id="7">
+            <name>Сумка для ракеток</name>
+            <categoryId>2</categoryId>
+            <price>4200</price>
+            <description>Вместительный теннисный чехол с термоотсеком для защиты струн от перепадов
+                температуры. Имеет отдельные карманы для сменной обуви, одежды и аксессуаров,
+                оснащен удобными плечевыми ремнями.</description>
+            <photo>photos\photoProducts/notFound.png</photo>
+        </product>
+        <product id="8">
+            <name>Напульсники</name>
+            <categoryId>2</categoryId>
+            <price>500</price>
+            <description>Эластичные махровые напульсники из натурального хлопка с добавлением
+                нейлона для лучшей фиксации. Эффективно впитывают пот со лба и защищают запястья от
+                травм во время резких движений.</description>
+            <photo>photos\photoProducts/notFound.png</photo>
+        </product>
+
+        <!-- Зал -->
+        <product id="9">
+            <name>Набор гантелей 10 кг</name>
+            <categoryId>3</categoryId>
+            <price>4500</price>
+            <description>Разборные гантели с надежными винтовыми замками и обрезиненными дисками,
+                которые не шумят и не царапают пол. Удобная рифленая рукоятка предотвращает
+                скольжение рук во время силовых упражнений.</description>
+            <photo>photos\photoProducts/notFound.png</photo>
+        </product>
+        <product id="10">
+            <name>Коврик для йоги</name>
+            <categoryId>3</categoryId>
+            <price>1200</price>
+            <description>Двухслойный коврик из гипоаллергенного материала TPE с рельефной
+                поверхностью против скольжения. Оптимальная толщина обеспечивает комфорт для
+                суставов при выполнении упражнений на полу и растяжке.</description>
+            <photo>photos\photoProducts/notFound.png</photo>
+        </product>
+        <product id="11">
+            <name>Скакалка скоростная</name>
+            <categoryId>3</categoryId>
+            <price>800</price>
+            <description>Профессиональная скакалка со встроенными подшипниками в рукоятках для
+                максимально плавного и быстрого вращения. Стальной трос в защитной оболочке легко
+                регулируется по длине под любой рост пользователя.</description>
+            <photo>photos\photoProducts/notFound.png</photo>
+        </product>
+        <product id="12">
+            <name>Перчатки для фитнеса</name>
+            <categoryId>3</categoryId>
+            <price>1100</price>
+            <description>Защитные перчатки с гелевыми вставками на ладонях для предотвращения
+                мозолей и надежного хвата штанги. Перфорированная ткань на тыльной стороне ладони
+                обеспечивает отличный воздухообмен и комфорт.</description>
+            <photo>photos\photoProducts/notFound.png</photo>
+        </product>
+
+        <!-- Футбол -->
+        <product id="13">
+            <name>Футбольные бутсы</name>
+            <categoryId>4</categoryId>
+            <price>6500</price>
+            <description>Бутсы с гибридным расположением шипов для игры на натуральном и
+                искусственном газоне. Верх из мягкой синтетической кожи обеспечивает отличное
+                чувство мяча и комфортную посадку стопы.</description>
+            <photo>photos\photoProducts/notFound.png</photo>
+        </product>
+        <product id="14">
+            <name>Мяч Adidas League</name>
+            <categoryId>4</categoryId>
+            <price>3200</price>
+            <description>Футбольный мяч с технологией бесшовного соединения панелей методом
+                термосклейки. Обладает идеальной сферической формой и минимальным влагопоглощением,
+                сертифицирован для проведения соревнований регионального уровня.</description>
+            <photo>photos\photoProducts/notFound.png</photo>
+        </product>
+        <product id="15">
+            <name>Щитки защитные</name>
+            <categoryId>4</categoryId>
+            <price>1500</price>
+            <description>Легкие футбольные щитки с жестким внешним слоем из полипропилена и мягкой
+                подкладкой из пены EVA. Надежно защищают голень от ударов, не стесняя движений
+                футболиста на поле.</description>
+            <photo>photos\photoProducts/notFound.png</photo>
+        </product>
+        <product id="16">
+            <name>Вратарские перчатки</name>
+            <categoryId>4</categoryId>
+            <price>2500</price>
+            <description>Профессиональные перчатки с латексным покрытием ладоней для превосходного
+                сцепления с мячом в сухую и влажную погоду. Крой с внешними швами обеспечивает
+                большую площадь контакта при ловле.</description>
+            <photo>photos\photoProducts/notFound.png</photo>
+        </product>
+
+        <!-- Туризм -->
+        <product id="17">
+            <name>Палатка 2-местная</name>
+            <categoryId>5</categoryId>
+            <price>8500</price>
+            <description>Двухслойная туристическая палатка с просторным тамбуром для вещей и
+                противомоскитной сеткой. Тент с водостойкостью 3000 мм и проклеенные швы гарантируют
+                надежную защиту от сильного дождя и ветра.</description>
+            <photo>photos\photoProducts/notFound.png</photo>
+        </product>
+        <product id="18">
+            <name>Спальный мешок</name>
+            <categoryId>5</categoryId>
+            <price>3200</price>
+            <description>Спальник-кокон с современным синтетическим наполнителем, сохраняющим тепло
+                даже во влажном состоянии. Анатомический капюшон и тепловой валик вдоль молнии
+                обеспечивают комфортный сон при низких температурах.</description>
+            <photo>photos\photoProducts\bag.webp</photo>
+        </product>
+        <product id="19">
+            <name>Рюкзак походный 50л</name>
+            <categoryId>5</categoryId>
+            <price>5800</price>
+            <description>Экспедиционный рюкзак с регулируемой подвесной системой и жестким каркасом
+                для правильного распределения нагрузки. Оснащен множеством карманов, креплениями для
+                снаряжения и встроенным чехлом от дождя.</description>
+            <photo>photos\photoProducts/notFound.png</photo>
+        </product>
+        <product id="20">
+            <name>Горелка газовая</name>
+            <categoryId>5</categoryId>
+            <price>1800</price>
+            <description>Компактная складная горелка из нержавеющей стали с точной регулировкой
+                пламени и пьезоподжигом. Идеально подходит для быстрого приготовления пищи в
+                походных условиях, работает от стандартных газовых баллонов.</description>
+            <photo>photos\photoProducts/notFound.png</photo>
+        </product>
+    </products>
+</shop>
