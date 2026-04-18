@@ -28,6 +28,13 @@ closeIcon.addEventListener("click", () => {
     searchMenu.classList.toggle('search__active')
 })
 
+function getCat(id, categoryList) {
+                for (const category of categoryList)
+                    if (category.getAttribute("id") === id) {
+                        return category.textContent
+                    }
+            }
+
 fetch("xml/products.xml")
     .then(response => response.text())
     .then(
@@ -40,12 +47,6 @@ fetch("xml/products.xml")
             const inpEl = document.querySelector("#src-input")
             const ElementToInsert = document.getElementById("element-to-insert")
 
-            function getCat(id) {
-                for (const category of categoryList)
-                    if (category.getAttribute("id") === id) {
-                        return category.textContent
-                    }
-            }
             
             inpEl.addEventListener('input', (event) => {
                 let inputVal = event.target.value.toLowerCase()
@@ -69,7 +70,7 @@ fetch("xml/products.xml")
                         imgSrc.src = product.querySelector("photo").textContent
 
                         const categoryId = product.querySelector("categoryId").textContent
-                        category.textContent = getCat(categoryId)
+                        category.textContent = getCat(categoryId, categoryList)
                         
                         
                         ElementToInsert.append(newElement)

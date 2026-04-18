@@ -1,6 +1,6 @@
 .footer {
     border: 1px solid rgba(0,0,0,0.1);
-    max-height: 205px;
+    min-height: 205px;
     padding-top:20px;
     p {
         font-size: clamp(11px, 0.7vw, 12px);
@@ -13,7 +13,11 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        
+        @media (max-width: 768px) {
+    flex-direction: column; // Элементы встанут в колонку
+    gap: 20px;             // Расстояние между ними
+    text-align: center;    // Выравнивание текста по центру
+  }
     }
     &__contact {
         h5 {

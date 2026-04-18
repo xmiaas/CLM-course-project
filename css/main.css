@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -79,7 +80,7 @@ p {
 
 .footer {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  max-height: 205px;
+  min-height: 205px;
   padding-top: 20px;
 }
 .footer p {
@@ -91,6 +92,13 @@ p {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .footer__top {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
 }
 .footer__contact h5 {
   font-size: clamp(14px, 1vw, 16px);
@@ -618,7 +626,7 @@ p {
   background-color: transparent;
   font-size: 38px;
   flex: 1;
-  color: grayText;
+  color: rgb(75, 85, 99);
 }
 .search__close:hover {
   color: black;
@@ -690,6 +698,113 @@ p {
     transform: translate(-50%, -40%) scale(1);
   }
 }
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-cat {
+  display: flex;
+  gap: 100px;
+}
+
+.main__category {
+  flex: 1;
+}
+
+.cat__aside h3 {
+  font-size: 24px;
+  margin-top: 45px;
+}
+
+.cat_list {
+  list-style-type: none;
+  padding: 15px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 270px;
+}
+.cat_list li {
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 6px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.cat_list li:not(.li-active):hover {
+  background-color: #F9FAFB;
+}
+
+.li-active {
+  background-color: #FFF7ED;
+}
+
+.product-container {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* Увеличьте отступ для красоты */
+  width: 100%;
+}
+
+.product-cart {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #E5E7EB;
+  border-radius: 17px;
+  max-width: 260px;
+  height: 320px;
+}
+.product-cart:hover {
+  border-color: #fb923c;
+  box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.15);
+}
+.product-cart__img {
+  overflow: hidden;
+  width: 100%;
+  height: 240px;
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
+}
+.product-cart__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: transform 0.2s ease-in-out;
+}
+.product-cart__info {
+  flex-grow: 1;
+  padding: 10px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+}
+.product-cart__info .product-category {
+  font-size: 11px;
+  color: rgb(234, 88, 12);
+}
+.product-cart__info .product-name {
+  font-size: 13px;
+}
+.product-cart__info .product-price {
+  font-size: 14px;
+}
+.product-cart__info .product-price::after {
+  content: " BYN";
+}
+
+.img-active {
+  transform: scale(1.05);
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
