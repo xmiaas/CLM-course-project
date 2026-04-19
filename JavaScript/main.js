@@ -1,3 +1,5 @@
+import { getCat } from "./functions.js"
+
 const template = document.createElement("div")
 template.innerHTML = `
 <div class="product-template">
@@ -28,12 +30,7 @@ closeIcon.addEventListener("click", () => {
     searchMenu.classList.toggle('search__active')
 })
 
-function getCat(id, categoryList) {
-                for (const category of categoryList)
-                    if (category.getAttribute("id") === id) {
-                        return category.textContent
-                    }
-            }
+
 
 fetch("xml/products.xml")
     .then(response => response.text())

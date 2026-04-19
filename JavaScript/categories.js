@@ -1,4 +1,4 @@
-
+import "./main.js"
 
 //Боковоая панель с категориями 
 const liTagTemplate = document.createElement("li")
