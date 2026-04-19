@@ -1,4 +1,4 @@
-import { getCat } from "./functions.js"
+import { getCat, createProductElement } from "./functions.js"
 
 const template = document.createElement("div")
 template.innerHTML = `
@@ -49,27 +49,22 @@ fetch("xml/products.xml")
                 let inputVal = event.target.value.toLowerCase()
                 ElementToInsert.innerHTML = ""
                 let found = false; 
+
+                const selectors = {
+                    name: ".product-name",
+                    price: ".product-price",
+                    photo: ".product-img",
+                    category: ".cat"
+                }
+
                 for (const product of lst) {
                     const productName = product.querySelector("name").textContent.toLowerCase()
 
                     if (inputVal === "") return;
+                    
                     if (productName.includes(inputVal)){
                         found = true;
-                        const newElement = template.querySelector(".product-template").cloneNode(true)
-                        const name = newElement.querySelector(".product-name")
-                        const price = newElement.querySelector(".product-price")
-                        const imgSrc = newElement.querySelector(".product-img") 
-                        const category = newElement.querySelector(".cat")
-
-
-                        name.textContent = product.querySelector("name").textContent
-                        price.textContent = product.querySelector("price").textContent
-                        imgSrc.src = product.querySelector("photo").textContent
-
-                        const categoryId = product.querySelector("categoryId").textContent
-                        category.textContent = getCat(categoryId, categoryList)
-                        
-                        
+                        const newElement = createProductElement(product, template,selectors,categoryList)
                         ElementToInsert.append(newElement)
                     }
                 }

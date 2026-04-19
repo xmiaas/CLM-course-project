@@ -5,6 +5,15 @@ export function getCat(id, categoryList) {
         }
 }
 
+export function getID(name, categoryList) { 
+    for (const category of categoryList) {
+        if(name.toLowerCase() === category.textContent.toLowerCase()) {
+            return category.getAttribute("id")
+        }
+    }
+    return "all"
+}
+
 export function createProductElement(product, template, selectors, catList) {
     let newEl = template.cloneNode(true)
     const name = product.querySelector("name").textContent;

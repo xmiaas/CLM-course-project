@@ -20,6 +20,8 @@ body {
     }
 }
 .cat_list { 
+    width: 100%;
+    max-width: 270px;
     list-style-type: none;
     padding: 15px;
     margin: 0;
@@ -46,10 +48,11 @@ body {
 .product-container {
     margin-top: 70px;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px; 
+    width: 100%;
+    margin-bottom: 30px;
 
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 10px; /* Увеличьте отступ для красоты */
-  width: 100%;
 }
 
 //карта товара
@@ -58,7 +61,7 @@ body {
     flex-direction: column;
     border: 1px solid #E5E7EB;
     border-radius: 17px;
-    max-width: 260px;
+    width: 100%;
     height: 320px;
     &:hover {
     border-color: #fb923c; 
@@ -72,6 +75,7 @@ body {
         border-top-left-radius: 17px;
         border-top-right-radius: 17px;
         img {
+            display: block;
             width: 100%;
             height: 100%; 
             object-fit: cover;

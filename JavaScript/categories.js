@@ -1,5 +1,5 @@
 import "./main.js"
-
+import { getCat, createProductElement, getID } from "./functions.js"
 //Боковоая панель с категориями 
 const liTagTemplate = document.createElement("li")
 const cartProductTemplate = document.createElement("div")
@@ -13,9 +13,29 @@ cartProductTemplate.innerHTML = `<div class="product-cart">
               <p class="product-price"></p>
             </div>
           </div>`
+const selectors = {
+                    name: ".product-name",
+                    price: ".product-price",
+                    photo: "img",
+                    category: ".product-category"
+                }
+
+
 const categoryListHtml = document.querySelector(".cat_list")
 const productConteiner = document.querySelector(".product-container")
 
+
+const displayProduct = (productList, categoryList, currentID="all") => {
+    productConteiner.innerHTML = ""
+
+    for (let product of productList) { 
+        if (currentID === "all" || currentID === product.querySelector("categoryId").textContent) {
+            let newEl = createProductElement(product,cartProductTemplate,selectors,categoryList)
+              productConteiner.append(newEl)
+        }
+                    
+}
+}
 
 fetch("xml/products.xml")
     .then(response => response.text())
@@ -36,38 +56,33 @@ fetch("xml/products.xml")
             //карточки
             const cart = cartProductTemplate.querySelector(".product-cart")
             const productList = xmlDoc.querySelectorAll("product")
-        
-            for (let product of productList) { // Добавьте let для переменной цикла
-                let newElement = cart.cloneNode(true);
-                
-                // ПРАВИЛЬНО: Присваиваем свойству textContent
-                newElement.querySelector(".product-name").textContent = product.querySelector("name").textContent;
-                newElement.querySelector(".product-price").textContent = product.querySelector("price").textContent;
-                newElement.querySelector("img").src = product.querySelector("photo").textContent;
+            displayProduct(productList, categoryList)
 
-                let catId = product.querySelector("categoryId").textContent;
-                
-                
-                newElement.querySelector(".product-category").textContent = getCat(catId, categoryList);
 
-                // ПРАВИЛЬНО: Используем append вместо add
-                productConteiner.append(newElement);
-}
+            categoryListHtml.addEventListener("click", (event) => {
+                //смена цвета при нажатии
+                const targetLi = event.target.closest("li");
+                if (!targetLi) return;
+                const currentActive = categoryListHtml.querySelector(".li-active");
+
+                if (currentActive && currentActive !== targetLi) {
+                    currentActive.classList.remove("li-active");
+                }
+
+                targetLi.classList.add("li-active");
+                
+                //вырисовка
+                let currentID = getID(targetLi.textContent, categoryList)
+                displayProduct(productList,categoryList, currentID)
+
+        });
+            
+            
         }
     )
 
     
-categoryListHtml.addEventListener("click", (event) => {
-        const targetLi = event.target.closest("li");
-        if (!targetLi) return;
-        const currentActive = categoryListHtml.querySelector(".li-active");
 
-        if (currentActive && currentActive !== targetLi) {
-            currentActive.classList.remove("li-active");
-        }
-
-        targetLi.classList.add("li-active");
-});
 
 
 productConteiner.addEventListener("mouseover", (event) => {
