@@ -24,7 +24,7 @@ export function createProductElement(product, template, selectors, catList) {
     newEl.querySelector(selectors.price).textContent = price
     newEl.querySelector(selectors.photo).src = photo
     newEl.querySelector(selectors.category).textContent = getCat(categoryId,catList)
-
+    newEl.dataset.id = product.getAttribute("id")
     if (selectors.description) {
         const desc = product.querySelector("description").textContent
         newEl.querySelector(selectors.description).textContent = desc

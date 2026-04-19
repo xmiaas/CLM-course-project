@@ -1,4 +1,3 @@
-import "./main.js"
 import { getCat, createProductElement, getID } from "./functions.js"
 //Боковоая панель с категориями 
 const liTagTemplate = document.createElement("li")
@@ -13,6 +12,7 @@ cartProductTemplate.innerHTML = `<div class="product-cart">
               <p class="product-price"></p>
             </div>
           </div>`
+const template = cartProductTemplate.querySelector(".product-cart")          
 const selectors = {
                     name: ".product-name",
                     price: ".product-price",
@@ -30,7 +30,7 @@ const displayProduct = (productList, categoryList, currentID="all") => {
 
     for (let product of productList) { 
         if (currentID === "all" || currentID === product.querySelector("categoryId").textContent) {
-            let newEl = createProductElement(product,cartProductTemplate,selectors,categoryList)
+            let newEl = createProductElement(product,template,selectors,categoryList)
               productConteiner.append(newEl)
         }
                     
@@ -93,4 +93,10 @@ productConteiner.addEventListener("mouseover", (event) => {
 productConteiner.addEventListener("mouseout", (event) => {
     const card = event.target.closest(".product-cart")
     card.querySelector("img").classList.remove("img-active")
+})
+
+productConteiner.addEventListener("click", (event) =>{
+    const cart = event.target.closest(".product-cart")
+    const id = cart.dataset.id
+    window.location.href=`productPage.html?id=${id}`
 })
