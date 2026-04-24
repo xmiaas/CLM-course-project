@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Категории</title>
+    <title>Document</title>
   </head>
   <body>
     <!--НАЧАЛО ШАПКИ-->
@@ -42,20 +42,53 @@
       </div>
     </header>
     <!--КОНЕЦ ШАПКИ-->
-    <main class="main__category">
-      <div class="container container-cat">
-        <aside class="cat__aside">
-          <h3>Категории</h3>
-          <nav class="cat__nav">
-            <ul class="cat_list">
-              <li class="li-active">Все</li>
-            </ul>
-          </nav>
-        </aside>
+    <div class="container container-basket">
+      <main class="main-basket">
+        <h1>Корзина</h1>
+        <ul class="basket-list"></ul>
+        <div class="order-info">
+          <p class="total-product"></p>
+          <hr />
+          <p class="total-price"></p>
+          <button id="make-order">Сделать заказ</button>
+        </div>
+      </main>
+    </div>
+    <div class="basket-form">
+      <form class="deliviry-form">
+        <div class="form__pole">
+          <label>ФИО</label>
+          <input type="text" placeholder="Иван Иванов" required />
+        </div>
+        <div class="form__pole">
+          <label>Ваша почта</label>
+          <input type="text" placeholder="example@gmail.com" required />
+        </div>
+        <div class="form__pole">
+          <label>Номер телефона</label>
+          <input type="text" placeholder="+3752911111" required />
+        </div>
+        <div class="form__pole" id="adress">
+          <label>Адресс</label>
+          <input type="text" placeholder="ул.Свердлова 13а" required />
+        </div>
+        <div class="form__pole">
+          <label>Страна</label>
+          <input type="text" placeholder="Беларусь" required />
+        </div>
+        <div class="form__pole">
+          <label>Город</label>
+          <input type="text" placeholder="Минск" required />
+        </div>
 
-        <div class="product-container"></div>
-      </div>
-    </main>
+        <div class="form__pole">
+          <button id="chanel" type="button">Омтена</button>
+        </div>
+        <div class="form__pole">
+          <button id="order">Заказать</button>
+        </div>
+      </form>
+    </div>
     <!--ФУТЕР-->
     <footer class="footer">
       <div class="container">
@@ -92,7 +125,6 @@
     </div>
 
     <script type="module" src="JavaScript/main.js"></script>
-    <script type="module" src="JavaScript/categories.js"></script>
-    ы
+    <script type="module" src="JavaScript/basket.js"></script>
   </body>
 </html>

@@ -84,7 +84,7 @@
     gap: 15px;
     padding: 10px;
     border-radius: 10px;
-    &:hover {
+    &:not(.product-template__basket):hover {
         background-color: #f9f9f9;
     }
     .product__info { 

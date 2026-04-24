@@ -31,3 +31,23 @@ export function createProductElement(product, template, selectors, catList) {
     }
     return newEl
 }
+
+export function addToLocalStorage(id) {
+    let allID = localStorage.getItem("ids") || ""
+    let ids = allID ? allID.split(",") : []
+    if (!ids.includes(String(id))) { 
+        ids.push(id)
+        localStorage.setItem("ids", ids.join(","))
+    }
+}
+
+export function getFromLocalStorage() {
+    let allID = localStorage.getItem("ids") || ""
+    return allID ? allID.split(",") : []
+}
+
+export function deleteFromLocalStorage(id) { 
+    let ids = getFromLocalStorage()
+    ids = ids.filter(x => x !== id)
+    localStorage.setItem("ids", ids.join(","))
+}

@@ -79,12 +79,15 @@
         max-width: 537px;
         button {
             width: 220px;
-            height: 59px;   
+            height: 56px;   
             border-radius: 12px;
             color:white;
             background-color: rgba(44, 44, 44, 1);
             font-family: "InterR";
             margin-top: 52px;
+            &:hover {
+                background-color: rgb(34, 34, 34);
+            }
         }
     }
         &__motivation-text {

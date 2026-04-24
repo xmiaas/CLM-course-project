@@ -1,16 +1,17 @@
 import { getCat, createProductElement } from "./functions.js"
 
-const template = document.createElement("div")
+const template = document.createElement("article")
+template.classList.add("product-template")
 template.innerHTML = `
-<div class="product-template">
+
           <img src = "" class="product-img">
           <div class = "product__info">
           <p class="product-name"></p>
           <p class="cat"></p>
           </div>
           <p class="product-price"></p>
-    </div>
     `
+
 
 
 
@@ -29,6 +30,11 @@ closeIcon.addEventListener("click", () => {
     document.getElementById("search-blur").style.display="none"
     searchMenu.classList.toggle('search__active')
 })
+
+document.querySelector("#from-main").addEventListener("click", () => {
+    window.location.href=`categoryPage.html`
+})
+
 
 
 
@@ -73,5 +79,11 @@ fetch("xml/products.xml")
                 }
             })
 
+            ElementToInsert.addEventListener("click", (event) => {
+                const cart = event.target.closest(".product-template")
+                const id = cart.dataset.id
+                window.location.href=`productPage.html?id=${id}`
+            })
         }
     )
+
