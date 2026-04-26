@@ -26,6 +26,12 @@ searchMenuIcon.addEventListener("click", () => {
     
 })
 
+const burger = document.getElementById("burgerBtn")
+      const nav = document.querySelector(".header__nav")
+      burger.addEventListener("click", () => {
+        nav.classList.toggle("header__nav--open")
+      });
+
 closeIcon.addEventListener("click", () => {
     document.getElementById("search-blur").style.display="none"
     searchMenu.classList.toggle('search__active')
@@ -87,9 +93,5 @@ fetch("xml/products.xml")
         }
     )
 
-const burger = document.getElementById("burgerBtn")
-      const nav = document.querySelector(".header__nav")
-      burger.addEventListener("click", () => {
-        nav.classList.toggle("header__nav--open")
-      });
+
 

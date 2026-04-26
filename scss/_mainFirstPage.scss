@@ -68,7 +68,7 @@
             }
             @include tablet {
                 height: auto;
-                margin-top: 180px;
+                margin-top: 130px;
                 padding-bottom: 30px;
 
                 &__photo-wrap {
@@ -122,7 +122,7 @@
         span {
             text-decoration: underline;
             color: rgba(234, 88, 12, 1);
-            text-underline-offset: 16px;
+            text-underline-offset: clamp(10px,1vw,16px);
             }
         }
         &__text1 {
@@ -143,7 +143,8 @@
         }
         @include tablet {
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
+
             gap: 10px;
 
             &__content-left {
@@ -211,7 +212,7 @@
         &__item {
             width: 348px;
             display:flex;
-            gap: 4px;
+            gap: 6px;
             img {
                 max-width:69px;
                 max-height: 69px;

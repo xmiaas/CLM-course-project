@@ -1,11 +1,10 @@
 .footer {
     margin-top: auto;
     border: 1px solid rgba(0,0,0,0.1);
-    min-height: 205px;
+    min-height: 150px;
     padding-top:20px;
     p {
         font-size: clamp(11px, 0.7vw, 12px);
-        
         color: $grayText;
     }
     &__top {
@@ -26,10 +25,7 @@
         flex-direction: column;
         gap: 6px;
         p {
-            
             color: $grayText;
-            
-            
         }
         
     } 
@@ -52,14 +48,14 @@
 
     hr { 
         margin-top: 20px;
-        
+        margin-bottom: 0;
         width: 100%;
         border: 0;
         border-top: 1px solid rgba(0,0,0,0.1);
     }
     &__letter{ 
         text-align: center;
-        padding: 18px 0;
+        margin: 12px 0;
     }
 
 
@@ -69,9 +65,9 @@
     padding: 20px 16px;
 
     &__top {
-        flex-direction: column; // ← ВОТ ЭТО ГЛАВНОЕ
+        flex-direction: column; 
         align-items: center;
-        gap: 16px; // можно чуть уменьшить
+        gap: 16px; 
     }
 
     &__logo {
@@ -85,7 +81,6 @@
 
     &__letter {
         font-size: 11px;
-        padding: 14px 0;
     }
 
     p {

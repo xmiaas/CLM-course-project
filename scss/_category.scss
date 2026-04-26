@@ -7,6 +7,12 @@ body {
     display: flex;
     gap: 100px;
     
+
+    @include tablet {
+        flex-direction: column;
+        gap: 0;
+    }
+    
 }
 //Менюха
 .main__category {
@@ -14,12 +20,24 @@ body {
     
 }
 .cat__aside {
+    
     position: sticky;
-    top: 40px; /* отступ от верха */
+    top: 40px; 
+    z-index: 999;
     align-self: flex-start;
+    background-color: white;
     h3 {
         font-size: 24px;
         margin-top: 45px;   
+    }
+    @include tablet {
+        top: 60px;
+        width: 100%;
+        background-color: white;
+        h3 {
+            margin-top: 20px;
+            font-size: 18px;
+        }
     }
 }
 
@@ -43,6 +61,20 @@ body {
             background-color: #F9FAFB;
         }
     }
+    @include tablet {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10px 0;
+        gap: 8px;
+
+        li {
+            font-size: 14px;
+            padding: 6px 12px;
+            border: 1px solid #E5E7EB;
+        }
+    }
 }
 
 .li-active { 
@@ -57,7 +89,14 @@ body {
     gap: 15px; 
     width: 100%;
     margin-bottom: 30px;
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
+    @include mobile {
+        margin-top: 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 //карта товара
@@ -76,7 +115,7 @@ body {
     &__img {
         overflow:hidden;
         width: 100%;           
-        height: 240px;
+        height: 70%;
         border-top-left-radius: 17px;
         border-top-right-radius: 17px;
         img {
@@ -89,6 +128,7 @@ body {
         }
     }
     &__info {
+        height: 30%;
         flex-grow: 1;
         padding: 10px;
         padding-left: 20px;
@@ -109,6 +149,14 @@ body {
             &::after {
                 content: " BYN";
             }
+        }
+    }
+
+    @include tablet  {
+        height: 260px;
+
+        &__img {
+            height: 180px;
         }
     }
     

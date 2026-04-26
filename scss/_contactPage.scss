@@ -23,11 +23,29 @@
                 padding-bottom: 39px;
             }
         }
+        @include mobile {
+            padding-bottom: 30px;
+
+            .container {
+                h1 { font-size: 26px; }
+                p { font-size: 14px; padding-bottom: 0; }
+            }
+        }
     }
     .container__inf {
         padding-top: 60px;
         display:flex;
         gap: 80px;
+
+        @include tablet {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        @include mobile {
+            padding-top: 30px;
+        }
+
         .contact-inf {
             width: 100%;
             display: flex;
@@ -73,6 +91,9 @@
                     
                 }
             }
+            @include tablet {
+                max-width: 100%;
+            }
         }
 
 
@@ -83,6 +104,15 @@
             background-color:rgba(247, 247, 247, 1);
             border-radius: 18px;
             padding: 23px 74px;
+
+            @include tablet {
+                max-width: 100%;
+            }
+
+            @include mobile {
+                padding: 20px 20px;
+            }
+            
             .form {
                 h4 {
                     font-size: 16px;
@@ -115,6 +145,9 @@
                             width: 100%;
                             min-height: 150px
                         }
+                    }
+                    @include mobile {
+                        flex: 1 1 100%;
                     }
                 }
                 button {
