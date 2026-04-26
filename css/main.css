@@ -78,6 +78,67 @@ p {
   width: 30px;
   height: 30px;
 }
+.header__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 25px;
+}
+@media (max-width: 1024px) {
+  .header__nav {
+    display: none;
+    position: absolute;
+    top: 63px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 16px 0;
+    z-index: 999;
+  }
+  .header__nav--open {
+    display: block;
+  }
+  .header__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .header__list li a {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+  .header__burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__icons {
+    width: auto;
+    margin-left: auto;
+    margin-right: 20px;
+    gap: 18px;
+  }
+  .header__icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .header__title {
+    font-size: 16px;
+  }
+  .header__logo {
+    width: 32px;
+    height: 32px;
+  }
+  .header__icons {
+    gap: 12px;
+  }
+}
 
 .footer {
   margin-top: auto;
@@ -94,13 +155,7 @@ p {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-@media (max-width: 768px) {
-  .footer__top {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
+  gap: 20px;
 }
 .footer__contact h5 {
   font-size: clamp(14px, 1vw, 16px);
@@ -137,6 +192,31 @@ p {
   text-align: center;
   padding: 18px 0;
 }
+@media (max-width: 480px) {
+  .footer {
+    text-align: center;
+    padding: 20px 16px;
+  }
+  .footer__top {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .footer__logo {
+    justify-content: center;
+    text-align: center;
+  }
+  .footer__contact {
+    align-items: center;
+  }
+  .footer__letter {
+    font-size: 11px;
+    padding: 14px 0;
+  }
+  .footer p {
+    font-size: 11px;
+  }
+}
 
 .main__section__two {
   margin-top: 272px;
@@ -164,7 +244,7 @@ p {
 }
 .main__section__two__txt {
   color: rgb(75, 85, 99);
-  font-size: clamp(6px, 1vw, 11px);
+  font-size: clamp(10px, 1vw, 12px);
 }
 .main__section__two__photo-wrap {
   display: flex;
@@ -197,6 +277,29 @@ p {
   left: 20px;
   color: white;
   font-size: clamp(14px, 1.2vw, 18px);
+}
+@media (max-width: 1024px) {
+  .main__section__two {
+    height: auto;
+    margin-top: 180px;
+    padding-bottom: 30px;
+  }
+  .main__section__two__photo-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  .main__section__two__photo-item {
+    max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .main__section__two {
+    margin-top: 30px;
+  }
+  .main__section__two__photo-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .main__section__one {
   display: flex;
@@ -247,11 +350,53 @@ p {
   -o-object-position: center;
      object-position: center;
 }
+@media (max-width: 1024px) {
+  .main__section__one {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .main__section__one__content-left {
+    padding-top: 40px;
+    max-width: 100%;
+    text-align: left;
+  }
+  .main__section__one__content-left button {
+    margin-top: 30px;
+  }
+  .main__section__one #sneakers_photo {
+    width: 100%;
+    border-radius: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .main__section__one {
+    gap: 20px;
+  }
+  .main__section__one__content-left {
+    padding-top: 20px;
+  }
+  .main__section__one__content-left button {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .main__section__one #sneakers_photo {
+    height: 260px;
+    border-radius: 16px;
+  }
+}
 .main__h1 {
   font-size: 32px;
   text-align: center;
   margin-top: 56px;
   margin-bottom: 55px;
+}
+@media (max-width: 480px) {
+  .main__h1 {
+    font-size: 22px;
+    margin-top: 36px;
+    margin-bottom: 30px;
+  }
 }
 .main__section__three {
   height: 361px;
@@ -287,6 +432,25 @@ p {
 .main__section__three__item .item-text__txt {
   font-size: clamp(8px, 0.9vw, 14px);
   color: rgb(75, 85, 99);
+}
+@media (max-width: 1024px) {
+  .main__section__three {
+    height: auto;
+    padding: 30px 0;
+  }
+  .main__section__three .container {
+    gap: 24px;
+    justify-content: flex-start;
+  }
+  .main__section__three__item {
+    width: calc(50% - 12px);
+    min-width: 260px;
+  }
+}
+@media (max-width: 480px) {
+  .main__section__three__item {
+    width: 100%;
+  }
 }
 
 .main-about .hero {
@@ -1060,6 +1224,16 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 134px;
+}
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
 }
 
 @font-face {

@@ -1,3 +1,14 @@
 $grayText: rgba(75, 85, 99, 1);
 
 $lightOrange: rgba(255, 85, 0, 1);
+
+$tablet: 1024px;
+$mobile: 480px;
+
+@mixin tablet {
+  @media (max-width: $tablet) { @content; }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) { @content; }
+}

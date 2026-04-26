@@ -14,11 +14,8 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        @media (max-width: 768px) {
-    flex-direction: column; // Элементы встанут в колонку
-    gap: 20px;             // Расстояние между ними
-    text-align: center;    // Выравнивание текста по центру
-  }
+        gap:20px;
+        
     }
     &__contact {
         h5 {
@@ -34,6 +31,7 @@
             
             
         }
+        
     } 
     &__logo { 
         max-width: 250px;
@@ -62,5 +60,36 @@
     &__letter{ 
         text-align: center;
         padding: 18px 0;
+    }
+
+
+    
+    @include mobile {
+    text-align: center;
+    padding: 20px 16px;
+
+    &__top {
+        flex-direction: column; // ← ВОТ ЭТО ГЛАВНОЕ
+        align-items: center;
+        gap: 16px; // можно чуть уменьшить
+    }
+
+    &__logo {
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__contact {
+        align-items: center;
+    }
+
+    &__letter {
+        font-size: 11px;
+        padding: 14px 0;
+    }
+
+    p {
+        font-size: 11px;
+    }
     }
 }

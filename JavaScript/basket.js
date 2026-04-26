@@ -89,3 +89,5 @@ makeOrderBtn.addEventListener("click", () => {
 document.querySelector("#chanel").addEventListener("click", () =>{
     orderMenuBackground.style.display = "none"; 
 })
+
+

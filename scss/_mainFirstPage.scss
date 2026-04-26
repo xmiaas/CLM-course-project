@@ -25,8 +25,7 @@
             }
             &__txt { 
                 color: $grayText;
-                
-                font-size:clamp(6px,1vw,11px);
+                font-size:clamp(10px,1vw,12px);
             }
 
             &__photo-wrap {
@@ -65,6 +64,28 @@
                     color: white;
                     
                     font-size: clamp(14px, 1.2vw, 18px);
+                }
+            }
+            @include tablet {
+                height: auto;
+                margin-top: 180px;
+                padding-bottom: 30px;
+
+                &__photo-wrap {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+                    gap: 15px;
+                }
+
+                &__photo-item {
+                    max-width: 100%;
+                }
+            }
+
+            @include mobile {
+                margin-top: 30px;
+                &__photo-wrap {
+                    grid-template-columns: repeat(2, 1fr);
                 }
             }
         }
@@ -120,6 +141,43 @@
             object-fit: cover; 
             object-position: center;
         }
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            &__content-left {
+                padding-top: 40px;
+                max-width: 100%;
+                text-align: left;
+
+                button {
+                    margin-top: 30px;
+                }
+            }
+            #sneakers_photo {
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+
+        @include mobile {
+            gap: 20px;
+
+            &__content-left {
+                padding-top: 20px;
+
+                button {
+                    width: 100%;
+                    margin-top: 20px;
+                }
+            }
+
+            #sneakers_photo {
+                height: 260px;
+                border-radius: 16px;
+            }
+        }
     }
     
 
@@ -129,6 +187,11 @@
         text-align: center;
         margin-top:56px;
         margin-bottom: 55px;
+        @include mobile {
+            font-size: 22px;
+            margin-top: 36px;
+            margin-bottom: 30px;
+        }
     }
 
     &__section__three {
@@ -168,6 +231,25 @@
                 }
             }
             
+        }
+
+        @include tablet {
+            height: auto;
+            padding: 30px 0;
+            .container {
+                gap: 24px;
+                justify-content: flex-start;
+            }
+            &__item {
+                width: calc(50% - 12px);
+                min-width: 260px;
+            }
+        }
+
+        @include mobile { 
+            &__item {
+                width: 100%;
+            }
         }
     }
     }

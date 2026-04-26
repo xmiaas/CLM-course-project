@@ -70,6 +70,80 @@
         width: 30px;
         height: 30px;
     }
+
+    &__burger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        
+               
+        
+                
+        font-size: 25px;
+        
+    }
+
+    @include tablet {
+        &__nav {  
+            display: none;
+            position: absolute;
+            top: 63px;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+            padding: 16px 0;
+            z-index: 999;
+
+            &--open {
+                display: block;
+            }
+        }
+
+        &__list {
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+        }
+
+        &__list li a {
+            padding: 12px 20px;
+            font-size: 16px;
+        }
+
+        &__burger {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__icons {
+            width: auto;
+            margin-left: auto;
+            margin-right: 20px;
+            gap: 18px;
+        }
+        &__icon {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    @include mobile {
+        &__title {
+            font-size: 16px;
+        }
+        &__logo {
+            width: 32px;
+            height: 32px;
+        }
+        &__icons {
+            gap: 12px;
+        }
+    }
     }
 
     

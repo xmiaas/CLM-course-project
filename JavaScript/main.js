@@ -87,3 +87,9 @@ fetch("xml/products.xml")
         }
     )
 
+const burger = document.getElementById("burgerBtn")
+      const nav = document.querySelector(".header__nav")
+      burger.addEventListener("click", () => {
+        nav.classList.toggle("header__nav--open")
+      });
+
