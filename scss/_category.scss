@@ -153,8 +153,8 @@ body {
     }
 
     @include tablet  {
-        height: 260px;
-
+        min-height: 260px;
+        height: auto;
         &__img {
             height: 180px;
         }

@@ -37,9 +37,7 @@ closeIcon.addEventListener("click", () => {
     searchMenu.classList.toggle('search__active')
 })
 
-document.querySelector("#from-main").addEventListener("click", () => {
-    window.location.href=`categoryPage.html`
-})
+
 
 
 
@@ -93,5 +91,9 @@ fetch("xml/products.xml")
         }
     )
 
+
+document.querySelector("#from-main").addEventListener("click", () => {
+    window.location.href=`categoryPage.html`
+})
 
 

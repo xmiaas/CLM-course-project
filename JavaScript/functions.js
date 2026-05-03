@@ -51,3 +51,22 @@ export function deleteFromLocalStorage(id) {
     ids = ids.filter(x => x !== id)
     localStorage.setItem("ids", ids.join(","))
 }
+
+export function showToast(message, duration = 3000) {
+    let container = document.querySelector('.toast-container');
+    if (!container) {
+        container = document.createElement('div');
+        container.className = 'toast-container';
+        document.body.appendChild(container);
+    }
+    const toast = document.createElement('div');
+    toast.className = 'toast'; 
+    toast.innerHTML = `
+        <span class="toast__text">${message}</span>
+    `;
+    container.appendChild(toast);
+    setTimeout(() => {
+        toast.classList.add('toast--hiding');
+        toast.addEventListener('animationend', () => toast.remove(), { once: true });
+    }, duration);
+}

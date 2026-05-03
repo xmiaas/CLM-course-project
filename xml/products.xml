@@ -10,192 +10,206 @@
     <products>
         <!-- Баскетбол -->
         <product id="1">
-            <name>Баскетбольный мяч Spalding</name>
+            <name>Мяч баскетбольный</name>
             <categoryId>1</categoryId>
-            <price>3500</price>
-            <description>Профессиональный баскетбольный мяч из композитной кожи с глубокими каналами
-                для лучшего контроля. Предназначен для интенсивных тренировок в спортивном зале и на
-                специализированных уличных площадках.</description>
-            <photo>photos\photoProducts/notFound.png</photo>
+            <price>120</price>
+            <description>Классический баскетбольный мяч для игры на улице и в зале. Поверхность
+                обеспечивает хороший контроль при ведении и бросках. Подходит для тренировок и
+                любительских игр. Долго держит форму и давление. Отличный выбор для ежедневного
+                использования.</description>
+            <photo>photos/photo/meachGlavnay.webp</photo>
         </product>
         <product id="2">
-            <name>Кроссовки Jordan Retro</name>
+            <name>Кроссовки баскетбольные</name>
             <categoryId>1</categoryId>
-            <price>12000</price>
-            <description>Культовая модель с усиленной поддержкой голеностопа и газовой вставкой Air
-                для максимальной амортизации при прыжках. Износостойкая подошва обеспечивает
-                идеальное сцепление с паркетом в зале.</description>
-            <photo>photos\photoProducts/notFound.png</photo>
-        </product>
-        <product id="3">
-            <name>Баскетбольное кольцо</name>
-            <categoryId>1</categoryId>
-            <price>5500</price>
-            <description>Усиленное стальное кольцо стандартного размера с амортизационным механизмом
-                для защиты щита при бросках сверху. В комплекте идет прочная нейлоновая сетка,
-                устойчивая к любым погодным условиям.</description>
-            <photo>photos\photoProducts/notFound.png</photo>
-        </product>
-        <product id="4">
-            <name>Форма (майка + шорты)</name>
-            <categoryId>1</categoryId>
-            <price>2800</price>
-            <description>Комплект баскетбольной формы из технологичной сетчатой ткани, которая
-                эффективно отводит влагу и обеспечивает вентиляцию. Свободный крой не стесняет
-                движений во время активной игры и дриблинга.</description>
-            <photo>photos\photoProducts/notFound.png</photo>
+            <price>350</price>
+            <description>Удобные кроссовки для активной игры в баскетбол. Обеспечивают хорошую
+                амортизацию при прыжках. Надежно фиксируют стопу и снижают риск травм. Подходят для
+                зала и площадки. Износостойкая подошва служит долго.</description>
+            <photo>photos/photoProducts/кроссовокБаскетбол.webp</photo>
         </product>
 
-        <!-- Тенис -->
-        <product id="5">
-            <name>Ракетка Wilson Pro</name>
-            <categoryId>2</categoryId>
-            <price>15000</price>
-            <description>Высокотехнологичная теннисная ракетка из графитового волокна с увеличенным
-                пятном контакта. Обеспечивает идеальный баланс между мощностью удара и контролем
-                мяча, подходит для игроков среднего и продвинутого уровня.</description>
-            <photo>photos\photoProducts/notFound.png</photo>
+        <product id="3">
+            <name>Кольцо баскетбольное</name>
+            <categoryId>1</categoryId>
+            <price>180</price>
+            <description>Прочное металлическое кольцо стандартного размера. Подходит для установки
+                дома или на улице. В комплекте есть сетка. Устойчиво к погодным условиям. Отличный
+                вариант для тренировок бросков.</description>
+            <photo>photos/photoProducts/кальцоБаскетбол.webp</photo>
         </product>
+
+        <product id="4">
+            <name>Форма баскетбольная</name>
+            <categoryId>1</categoryId>
+            <price>90</price>
+            <description>Легкая спортивная форма для игры и тренировок. Материал хорошо пропускает
+                воздух и быстро сохнет. Не сковывает движения во время игры. Подходит для зала и
+                улицы. Удобный вариант на каждый день.</description>
+            <photo>photos/photoProducts/формаБаскетбол.webp</photo>
+        </product>
+
         <product id="6">
-            <name>Теннисные мячи (3 шт.)</name>
-            <categoryId>2</categoryId>
-            <price>900</price>
-            <description>Герметичные теннисные мячи премиум-класса с фетровым покрытием высокой
-                плотности. Обладают стабильным отскоком и долговечностью, подходят для игры на любых
-                типах кортов, включая хард и грунт.</description>
-            <photo>photos\photoProducts/notFound.png</photo>
+            <name>Наколенники спортивные</name>
+            <categoryId>1</categoryId>
+            <price>45</price>
+            <description>Мягкие наколенники для защиты суставов. Снижают нагрузку при падениях.
+                Удобно сидят на ноге и не сползают. Подходят для тренировок и игр. Помогают избежать
+                травм.</description>
+            <photo>photos/photoProducts/наколенники (1).webp</photo>
         </product>
+
+        <!-- Теннис -->
         <product id="7">
-            <name>Сумка для ракеток</name>
+            <name>Ракетка теннисная</name>
             <categoryId>2</categoryId>
-            <price>4200</price>
-            <description>Вместительный теннисный чехол с термоотсеком для защиты струн от перепадов
-                температуры. Имеет отдельные карманы для сменной обуви, одежды и аксессуаров,
-                оснащен удобными плечевыми ремнями.</description>
-            <photo>photos\photoProducts/notFound.png</photo>
+            <price>420</price>
+            <description>Универсальная ракетка для игры в теннис. Подходит для начинающих и
+                любителей. Обеспечивает хороший контроль мяча. Удобная ручка снижает нагрузку на
+                кисть. Отличный выбор для регулярной игры.</description>
+            <photo>photos/photoProducts/тенисРакетка.webp</photo>
         </product>
+
         <product id="8">
+            <name>Мячи теннисные (3 шт)</name>
+            <categoryId>2</categoryId>
+            <price>25</price>
+            <description>Набор теннисных мячей для тренировок и игр. Обладают стабильным отскоком.
+                Подходят для разных покрытий. Долго сохраняют свои свойства. Отличный вариант для
+                повседневной игры.</description>
+            <photo>photos/photoProducts/мячиТенис.webp</photo>
+        </product>
+
+        <product id="9">
+            <name>Сумка для ракетки</name>
+            <categoryId>2</categoryId>
+            <price>110</price>
+            <description>Удобная сумка для хранения ракетки. Защищает от пыли и повреждений. Есть
+                дополнительные карманы. Легко переносить на плече. Подходит для тренировок.</description>
+            <photo>photos/photoProducts/СумкаТенис.webp</photo>
+        </product>
+
+        <product id="10">
             <name>Напульсники</name>
             <categoryId>2</categoryId>
-            <price>500</price>
-            <description>Эластичные махровые напульсники из натурального хлопка с добавлением
-                нейлона для лучшей фиксации. Эффективно впитывают пот со лба и защищают запястья от
-                травм во время резких движений.</description>
-            <photo>photos\photoProducts/notFound.png</photo>
+            <price>15</price>
+            <description>Практичные напульсники для спорта. Впитывают пот во время игры. Повышают
+                комфорт и контроль. Легко стираются и быстро сохнут. Подходят для любых тренировок.</description>
+            <photo>photos/photoProducts/напульсник.webp</photo>
+        </product>
+
+        <product id="12">
+            <name>Кепка спортивная</name>
+            <categoryId>2</categoryId>
+            <price>30</price>
+            <description>Легкая кепка для занятий на улице. Защищает от солнца. Хорошо пропускает
+                воздух. Удобно сидит на голове. Подходит для спорта и отдыха.</description>
+            <photo>photos/photoProducts/кепкаТенис.webp</photo>
         </product>
 
         <!-- Зал -->
-        <product id="9">
-            <name>Набор гантелей 10 кг</name>
+        <product id="13">
+            <name>Гантели набор</name>
             <categoryId>3</categoryId>
-            <price>4500</price>
-            <description>Разборные гантели с надежными винтовыми замками и обрезиненными дисками,
-                которые не шумят и не царапают пол. Удобная рифленая рукоятка предотвращает
-                скольжение рук во время силовых упражнений.</description>
-            <photo>photos\photoProducts/notFound.png</photo>
+            <price>140</price>
+            <description>Разборные гантели для домашних тренировок. Позволяют менять вес нагрузки.
+                Удобные рукоятки не скользят. Подходят для разных упражнений. Отличный выбор для
+                начинающих.</description>
+            <photo>photos/photoProducts/наборГантели.webp</photo>
         </product>
-        <product id="10">
-            <name>Коврик для йоги</name>
+
+        <product id="14">
+            <name>Коврик для тренировок</name>
             <categoryId>3</categoryId>
-            <price>1200</price>
-            <description>Двухслойный коврик из гипоаллергенного материала TPE с рельефной
-                поверхностью против скольжения. Оптимальная толщина обеспечивает комфорт для
-                суставов при выполнении упражнений на полу и растяжке.</description>
-            <photo>photos\photoProducts/notFound.png</photo>
+            <price>35</price>
+            <description>Мягкий коврик для занятий спортом. Подходит для йоги и фитнеса. Не скользит
+                на полу. Легко складывается и переносится. Обеспечивает комфорт во время упражнений.</description>
+            <photo>photos/photoProducts/коврикЗал.webp</photo>
         </product>
-        <product id="11">
-            <name>Скакалка скоростная</name>
+
+        <product id="15">
+            <name>Скакалка</name>
             <categoryId>3</categoryId>
-            <price>800</price>
-            <description>Профессиональная скакалка со встроенными подшипниками в рукоятках для
-                максимально плавного и быстрого вращения. Стальной трос в защитной оболочке легко
-                регулируется по длине под любой рост пользователя.</description>
-            <photo>photos\photoProducts/notFound.png</photo>
+            <price>20</price>
+            <description>Простая скакалка для кардио тренировок. Помогает улучшить выносливость.
+                Легкая и удобная в использовании. Подходит для дома и зала. Отличный вариант для
+                разминки.</description>
+            <photo>photos/photoProducts/скакалка.webp</photo>
         </product>
-        <product id="12">
-            <name>Перчатки для фитнеса</name>
+
+        <product id="17">
+            <name>Эспандер</name>
             <categoryId>3</categoryId>
-            <price>1100</price>
-            <description>Защитные перчатки с гелевыми вставками на ладонях для предотвращения
-                мозолей и надежного хвата штанги. Перфорированная ткань на тыльной стороне ладони
-                обеспечивает отличный воздухообмен и комфорт.</description>
-            <photo>photos\photoProducts/notFound.png</photo>
+            <price>25</price>
+            <description>Эластичный эспандер для тренировок. Подходит для рук и ног. Компактный и
+                удобный. Можно использовать дома. Хорош для растяжки и силы.</description>
+            <photo>photos/photoProducts/эспандер (1).webp</photo>
         </product>
 
         <!-- Футбол -->
-        <product id="13">
-            <name>Футбольные бутсы</name>
+        <product id="19">
+            <name>Бутсы футбольные</name>
             <categoryId>4</categoryId>
-            <price>6500</price>
-            <description>Бутсы с гибридным расположением шипов для игры на натуральном и
-                искусственном газоне. Верх из мягкой синтетической кожи обеспечивает отличное
-                чувство мяча и комфортную посадку стопы.</description>
-            <photo>photos\photoProducts/notFound.png</photo>
+            <price>200</price>
+            <description>Удобные бутсы для игры на поле. Обеспечивают хорошее сцепление. Подходят
+                для разных покрытий. Легкие и прочные. Отличный выбор для тренировок.</description>
+            <photo>photos/photoProducts/бутсы.webp</photo>
         </product>
-        <product id="14">
-            <name>Мяч Adidas League</name>
+
+        <product id="20">
+            <name>Мяч футбольный</name>
             <categoryId>4</categoryId>
-            <price>3200</price>
-            <description>Футбольный мяч с технологией бесшовного соединения панелей методом
-                термосклейки. Обладает идеальной сферической формой и минимальным влагопоглощением,
-                сертифицирован для проведения соревнований регионального уровня.</description>
-            <photo>photos\photoProducts/notFound.png</photo>
+            <price>110</price>
+            <description>Классический футбольный мяч. Подходит для игр и тренировок. Хорошо держит
+                форму. Удобен в контроле. Подходит для улицы.</description>
+            <photo>photos/photoProducts/мячФутбол.webp</photo>
         </product>
-        <product id="15">
-            <name>Щитки защитные</name>
+
+        <product id="23">
+            <name>Форма футбольная</name>
             <categoryId>4</categoryId>
-            <price>1500</price>
-            <description>Легкие футбольные щитки с жестким внешним слоем из полипропилена и мягкой
-                подкладкой из пены EVA. Надежно защищают голень от ударов, не стесняя движений
-                футболиста на поле.</description>
-            <photo>photos\photoProducts/notFound.png</photo>
-        </product>
-        <product id="16">
-            <name>Вратарские перчатки</name>
-            <categoryId>4</categoryId>
-            <price>2500</price>
-            <description>Профессиональные перчатки с латексным покрытием ладоней для превосходного
-                сцепления с мячом в сухую и влажную погоду. Крой с внешними швами обеспечивает
-                большую площадь контакта при ловле.</description>
-            <photo>photos\photoProducts/notFound.png</photo>
+            <price>95</price>
+            <description>Комплект формы для игры. Легкий и удобный материал. Не сковывает движения.
+                Подходит для тренировок. Отличный вариант для команды.</description>
+            <photo>photos/photoProducts/формаФутбольная.webp</photo>
         </product>
 
         <!-- Туризм -->
-        <product id="17">
-            <name>Палатка 2-местная</name>
+        <product id="25">
+            <name>Палатка</name>
             <categoryId>5</categoryId>
-            <price>8500</price>
-            <description>Двухслойная туристическая палатка с просторным тамбуром для вещей и
-                противомоскитной сеткой. Тент с водостойкостью 3000 мм и проклеенные швы гарантируют
-                надежную защиту от сильного дождя и ветра.</description>
-            <photo>photos\photoProducts/notFound.png</photo>
+            <price>260</price>
+            <description>Туристическая палатка для отдыха на природе. Защищает от дождя и ветра.
+                Легко устанавливается. Подходит для двоих. Удобна в перевозке.</description>
+            <photo>photos/photoProducts/палатка.webp</photo>
         </product>
-        <product id="18">
-            <name>Спальный мешок</name>
+
+        <product id="27">
+            <name>Рюкзак походный</name>
             <categoryId>5</categoryId>
-            <price>3200</price>
-            <description>Спальник-кокон с современным синтетическим наполнителем, сохраняющим тепло
-                даже во влажном состоянии. Анатомический капюшон и тепловой валик вдоль молнии
-                обеспечивают комфортный сон при низких температурах.</description>
-            <photo>photos\photoProducts\bag.webp</photo>
+            <price>180</price>
+            <description>Вместительный рюкзак для походов. Удобные лямки. Много отделений. Подходит
+                для длительных поездок. Прочный материал.</description>
+            <photo>photos/photoProducts/походный рюкзак.webp</photo>
         </product>
-        <product id="19">
-            <name>Рюкзак походный 50л</name>
+
+        <product id="29">
+            <name>Фонарь налобный</name>
             <categoryId>5</categoryId>
-            <price>5800</price>
-            <description>Экспедиционный рюкзак с регулируемой подвесной системой и жестким каркасом
-                для правильного распределения нагрузки. Оснащен множеством карманов, креплениями для
-                снаряжения и встроенным чехлом от дождя.</description>
-            <photo>photos\photoProducts/notFound.png</photo>
+            <price>45</price>
+            <description>Яркий налобный фонарь. Освобождает руки. Подходит для ночных походов.
+                Легкий и удобный. Работает долго.</description>
+            <photo>photos/photoProducts/фонарь.webp</photo>
         </product>
-        <product id="20">
-            <name>Горелка газовая</name>
+
+        <product id="30">
+            <name>Термос</name>
             <categoryId>5</categoryId>
-            <price>1800</price>
-            <description>Компактная складная горелка из нержавеющей стали с точной регулировкой
-                пламени и пьезоподжигом. Идеально подходит для быстрого приготовления пищи в
-                походных условиях, работает от стандартных газовых баллонов.</description>
-            <photo>photos\photoProducts/notFound.png</photo>
+            <price>50</price>
+            <description>Термос для горячих напитков. Долго держит тепло. Удобный в использовании.
+                Подходит для походов. Прочный корпус.</description>
+            <photo>photos/photoProducts/термос.webp</photo>
         </product>
+
     </products>
 </shop>

@@ -97,20 +97,24 @@
 
           <section class="contact-form">
             <h4>Напишите нам сообщение</h4>
-            <form class="form">
+            <form class="form" id="cont-form">
               <div class="form__pole">
                 <label>Ваше имя</label>
                 <input type="text" placeholder="Иван Иванов" required />
               </div>
               <div class="form__pole">
                 <label>Ваша почта</label>
-                <input type="text" placeholder="example@gmail.com" required />
+                <input type="email" placeholder="example@gmail.com" required />
               </div>
               <div class="form__pole">
                 <label>Сообщение</label>
-                <input type="text" placeholder="Иван Иванов" required />
+                <textarea
+                  type="text"
+                  placeholder="Как мы можем помочь вам?"
+                  required
+                ></textarea>
               </div>
-              <button>Отправить</button>
+              <button type="submit" id="sumbit-contact">Отправить</button>
             </form>
           </section>
         </div>
@@ -153,5 +157,6 @@
     </div>
 
     <script type="module" src="JavaScript/main.js"></script>
+    <script type="module" src="JavaScript/contact.js"></script>
   </body>
 </html>

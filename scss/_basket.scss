@@ -3,6 +3,28 @@
  
 }
 .main-basket { 
+    @include tablet {
+        flex-direction: column; 
+        padding: 20px 0;
+        .basket-list {
+            overflow: visible;
+            flex: none;
+            width: 100%;
+        }
+        .order-info {
+           
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+
+    @include mobile {
+        gap: 20px;
+        h1 {
+            font-size: 24px;
+        }
+    }
+    
     padding: 30px 0;
     display: flex;
     flex-wrap: wrap;
@@ -53,13 +75,22 @@
 }
 
 .product-template__basket {
+    @include mobile {
+        padding: 10px;
+        .product-img {
+            width: 50px;
+            height: 50px;
+        }
+        .product-name {
+            font-size: 14px;
+        }
+    }
     position: relative;
     border: 1px solid #f0f0f0;
     padding: 15px;
-    
+    border-radius: 20px;
     &:hover {
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 
-              
+        border-color: #fb923c;
     }
     .product-name {
         font-size: 16px;       
@@ -103,7 +134,30 @@
     backdrop-filter: brightness(0.8);
     z-index: 10001;
 }
+.basket-empty {
+  color: $grayText;
+  font-size: 1.25rem;
+  display:flex;
+  width: 100%;
+  text-align: center;
+  
+}
 .deliviry-form {
+    @include tablet {
+        width: 90%;
+        top: 100px; 
+    }
+
+    @include mobile {
+        top: 50px;
+        padding: 15px;
+        gap: 15px;
+
+        .form__pole {
+            flex: 1 1 100%; 
+        }
+        
+    }
     border-radius: 10px;
     max-width: 680px;
     z-index: 10003;
@@ -162,6 +216,7 @@
         }
 
 }
+
 
 
 

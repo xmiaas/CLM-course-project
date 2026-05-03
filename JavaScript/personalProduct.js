@@ -1,4 +1,4 @@
-import { createProductElement,addToLocalStorage } from "./functions.js"
+import { createProductElement,addToLocalStorage, showToast } from "./functions.js"
 const template = document.createElement("main")
 template.classList.add("main__personal-product")
 template.innerHTML = `<a class="back">&larr; Вернутся назад</a>
@@ -34,8 +34,8 @@ fetch("xml/products.xml")
 
             const buttonAddToBasket = el.querySelector("button")
             buttonAddToBasket.addEventListener("click", ()=> {
-               
                 addToLocalStorage(productId)
+                showToast("Товар добавлен в корзину!")
             })
             el.querySelector(".back").addEventListener("click", ()=>{
                 window.history.back()

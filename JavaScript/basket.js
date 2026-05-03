@@ -1,4 +1,4 @@
-import { getFromLocalStorage, createProductElement,deleteFromLocalStorage } from "./functions.js"
+import { getFromLocalStorage, createProductElement,deleteFromLocalStorage, showToast } from "./functions.js"
 const template = document.createElement("li")
 template.innerHTML = `<article class="product-template product-template__basket">
               <img src="" class="product-img" />
@@ -33,7 +33,6 @@ function getInfo(xmlDoc) {
     
     ids.forEach(productId => {
         const product = xmlDoc.querySelector(`product[id="${productId}"]`)
-        console.log("ищем:", productId, "нашли:", product)
         const price = product.querySelector("price").textContent
         totalPrice += Number(price)
     });
@@ -49,7 +48,13 @@ function showBascket(xmlDoc, catList) {
     }
 } 
 
- 
+function checkEmptyBasket() {
+    const emptyMsg = document.getElementById("basket-empty")
+    const isEmpty = insertPlace.children.length === 0
+    const order_inf = document.querySelector(".order-info")
+    emptyMsg.style.display = isEmpty ? "block" : "none"
+    order_inf.style.display = isEmpty ? "none" : "flex"
+}
 
 fetch("xml/products.xml")
     .then(response => response.text())
@@ -61,9 +66,11 @@ fetch("xml/products.xml")
             const categoryList = xmlDoc.querySelectorAll("category")
             showBascket(xmlDoc, categoryList)
             getInfo(xmlDoc)
+            checkEmptyBasket()
             window.addEventListener("storage" ,()=>{
                 showBascket(xmlDoc,categoryList)
                 getInfo(xmlDoc)
+                 checkEmptyBasket()
             })
             insertPlace.addEventListener("click" , event => {
             const target = event.target.closest(".product-remove")
@@ -72,12 +79,21 @@ fetch("xml/products.xml")
                 deleteFromLocalStorage(deletedId)
                 event.target.closest("li").remove()
                 getInfo(xmlDoc)
+                checkEmptyBasket()
+                return
             }
+            const li = event.target.closest("li")
+            if (li) {
+            const id = li.dataset.id
+            window.location.href = `productPage.html?id=${id}`
+        }
+
         })   
             
 
         }
     )
+
 
 const orderMenuBackground = document.querySelector(".basket-form");
 const makeOrderBtn = document.querySelector("#make-order");
@@ -91,3 +107,16 @@ document.querySelector("#chanel").addEventListener("click", () =>{
 })
 
 
+const form = document.querySelector(".deliviry-form")
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
+    orderMenuBackground.style.display = "none"
+    form.reset()
+
+    localStorage.removeItem("ids")
+    document.querySelector(".basket-list").innerHTML = ""
+    document.querySelector(".total-price").textContent = "Общая сумма: 0 BYN"
+    document.querySelector(".total-product").textContent = "Количество товаров: 0"
+    checkEmptyBasket()
+    showToast("Ваш заказ принят! Мы свяжемся с вами в ближайшее время.", 5000)
+})
