@@ -35,10 +35,9 @@ export function createProductElement(product, template, selectors, catList) {
 export function addToLocalStorage(id) {
     let allID = localStorage.getItem("ids") || ""
     let ids = allID ? allID.split(",") : []
-    if (!ids.includes(String(id))) { 
-        ids.push(id)
-        localStorage.setItem("ids", ids.join(","))
-    }
+    ids.push(id)
+    localStorage.setItem("ids", ids.join(","))
+    
 }
 
 export function getFromLocalStorage() {
@@ -48,7 +47,10 @@ export function getFromLocalStorage() {
 
 export function deleteFromLocalStorage(id) { 
     let ids = getFromLocalStorage()
-    ids = ids.filter(x => x !== id)
+    const index = ids.indexOf(id)
+     if (index !== -1) {
+        ids.splice(index, 1) 
+    }
     localStorage.setItem("ids", ids.join(","))
 }
 

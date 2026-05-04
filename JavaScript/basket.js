@@ -36,7 +36,7 @@ function getInfo(xmlDoc) {
         const price = product.querySelector("price").textContent
         totalPrice += Number(price)
     });
-    totalPriceHtml.textContent = "Общая сумма: " + totalPrice
+    totalPriceHtml.textContent = "Общая сумма: " + totalPrice + " BYN"
     totalPoductHtml.textContent = "Количество товаров: " + totalProduct
 }
 function showBascket(xmlDoc, catList) {
