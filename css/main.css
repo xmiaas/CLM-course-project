@@ -905,12 +905,6 @@ p {
   background-color: black;
   z-index: 20;
 }
-@media (max-width: 480px) {
-  .search__input-block::after {
-    transform: scaleY(0.5);
-    transform-origin: bottom;
-  }
-}
 .search__close {
   border: none;
   background-color: transparent;
