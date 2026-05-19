@@ -23,7 +23,6 @@
     transform: translateX(-50%);
     min-height: 200px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-    
     &__active { 
         display: block; 
         animation: appearance 0.3s ease-out forwards; 
@@ -31,15 +30,18 @@
     &__input-block {
         height: 45px;
         display: flex;  
-        box-shadow: 0 1px 0 0 black;
         width: 100%;
         justify-content: space-evenly;
         align-items: center;
         gap:15px;
+        
+        position: relative;
+        z-index: 10;
         img{
             width: 38px;
             height: 38px;
             flex: 1;
+            border: none;
             
         }
         input {
@@ -48,11 +50,27 @@
             height: 100%;
             font-family: "InterR";
             font-size: 16px;
+            
             &:focus {
                 outline: none;
+                appearance: none;
+            }
+            
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: black;
+            z-index: 20; 
+            @include mobile {
+                transform: scaleY(0.5);
+                transform-origin: bottom; 
             }
         }
-
     }
     &__close {
         border: none;
@@ -66,7 +84,7 @@
     }
 
     &__content { 
-        
+        margin-top: 1px;
         padding: 15px;
         display: flex;
         flex-direction: column;
@@ -74,6 +92,7 @@
         gap:10px;
         overflow-y: auto;
         max-height: 300px;
+        
     }
     
     
@@ -89,6 +108,7 @@
     gap: 15px;
     padding: 10px;
     border-radius: 10px;
+    min-width: 0;
     &:not(.product-template__basket):hover {
         background-color: #f9f9f9;
     }
@@ -98,7 +118,7 @@
         align-items: flex-start; 
         gap: 2px;
         flex-grow: 1;    
-  min-width: 0;
+        min-width: 0;
     }
     .product-name {
         font-size: 14px;
@@ -136,6 +156,7 @@
         top: 60px;
         font-size: 13px;
         color: $grayText;
+        
         }
 
 @keyframes appearance {
